@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@drawable/sensor_card_view"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:id="@+id/result_sensor_status"
+            style="@style/addSensorItemLocation"
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            android:text="온도 센서"
+            android:paddingBottom="0dp"/>
+        <ImageView
+            android:id="@+id/result_status_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/result_sensor_status"
+            android:src="@drawable/thermometer"
+            android:paddingTop="0dp"
+            android:paddingLeft="15dp" />
+        <TextView
+            android:id="@+id/result_status_text"
+            style="@style/addSensorItemLocation"
+            android:layout_toRightOf="@id/result_status_image"
+            android:layout_below="@id/result_sensor_status"
+            android:textColor="@color/black"
+            android:paddingTop="0dp"
+            android:textSize="12dp"
+            android:text="35°C" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

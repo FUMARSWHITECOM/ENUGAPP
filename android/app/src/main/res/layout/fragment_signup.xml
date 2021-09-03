@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:paddingTop="20dp"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
+                <TextView
+                    style="@style/viewParent.headerText.NoMode"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white"
+                    android:text="계정생성" />
+            </RelativeLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signUpUserNameLayout"
+                style="@style/parent"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                android:layout_marginTop="@dimen/loginViewsMargin">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/signUpUserNameInput"
+                    style="@style/modifiedEditText"
+                    android:hint="@string/username_hint"
+                    android:inputType="textPersonName"
+                    android:background="@drawable/rounded_button"
+                    android:maxLines="1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signUpIdLayout"
+                style="@style/parent"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                android:layout_marginTop="@dimen/loginViewsMargin">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/signUpIdInput"
+                    style="@style/modifiedEditText"
+                    android:hint="@string/id_hint"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/rounded_button"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signUpPasswordLayout"
+                style="@style/parent"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                android:layout_marginTop="@dimen/loginViewsMargin">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/signUpPasswordInput"
+                    style="@style/modifiedEditText"
+                    android:hint="@string/password_hint"
+                    android:inputType="textPassword"
+                    android:background="@drawable/rounded_button"
+                    android:maxLines="1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signUpPasswordCheckLayout"
+                style="@style/parent"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                android:layout_marginTop="@dimen/loginViewsMargin">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/signUpPasswordCheckInput"
+                    style="@style/modifiedEditText"
+                    android:hint="@string/password_check_hint"
+                    android:inputType="textPassword"
+                    android:background="@drawable/rounded_button"
+                    android:maxLines="1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                style="@style/viewParent"
+                android:id="@+id/hasAccountAlready"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:text="이미 계정이 있으신가요?"
+                android:textColor="@color/highlightColor"
+                android:textSize="@dimen/signInUpSwitchTextSize" />
+            <Button
+                app:backgroundTint="@null"
+                android:id="@+id/signUpButton"
+                style="@style/loginButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                android:text="회원가입" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

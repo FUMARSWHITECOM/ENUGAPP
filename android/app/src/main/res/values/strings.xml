@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EUNGAPP</string>
+    <string name="id_hint">아이디</string>
+    <string name="password_hint">비밀번호</string>
+    <string name="password_check_hint">비밀번호 확인</string>
+    <string name="username_hint">사용자 이름</string>
+</resources>
